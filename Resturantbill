@@ -1,0 +1,23 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract ResturantBill
+{
+    string ResturantName;
+    string Date;
+    int Price;
+    int Billnumber;
+    int Tax;
+    string Day;
+    function ResturantBill(string newResturantName, string newDate, int newPrice, int newBillnumber, int newTax, string newDay)public
+    {
+    ResturantName = newResturantName;
+    Date = newDate;
+    Price = newPrice;
+    Billnumber = newBillnumber;
+    Tax = newTax;
+    Day = newDay;
+    }
+    function getResturantBill() public view returns(string, string, int, int, int, string)
+    {
+        return(ResturantName, Date, Price, Billnumber, Tax, Day);
+    }
+}
