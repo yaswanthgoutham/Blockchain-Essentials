@@ -1,0 +1,21 @@
+pragma solidity 0.4.18 <= 0.6.12;
+contract DataofMilk
+{
+string customerName;
+int PriceoftheMilk;
+int LitersofMilk;
+string Date;
+string AdrssofCustomer;
+function DataofMilk(string newcustomerName, int newPriceoftheMilk, int newLitersofMilk, string newDate, string newAdrssofCustomer)public
+{
+customerName = newcustomerName;
+PriceoftheMilk = newPriceoftheMilk;
+LitersofMilk = newLitersofMilk;
+Date = newDate;
+AdrssofCustomer = newAdrssofCustomer;
+}
+function getDataofMilk()public view returns(string, int, int, string, string)
+{
+    return(customerName, PriceoftheMilk, LitersofMilk, Date, AdrssofCustomer);
+}
+}
